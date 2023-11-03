@@ -1,3 +1,5 @@
+**_NOTE: THE CHALLENGE IS STILL ONGOING. I WILL CONTINUOUSLY UPDATE THIS REPOSITORY AS I MAKE PROGRESS_**
+
 # 30DaysDuckDBChallenge
 
 ## Introduction 
@@ -44,7 +46,8 @@ To ensure data accuracy, consistency, and integrity, I conducted the following p
 
 - 4. I enhanced the dataset structure by renaming few columns
  
-      ![](8in1.jpg)
+     This is the appearance of the dataset after undergoing thorough cleaning.
+      ![](aftercleaning.jpg)
 
 ## Day 6-7: Analysis 
 I successfully completed the first set of data analysis tasks for this journey, gaining profound insights into the FIFA 2021 dataset. These tasks involved thorough exploration of player data, leveraging DuckDB's analytical capabilities. This report outlines my findings and key takeaways from each of the four completed tasks the thier SQL queries.
