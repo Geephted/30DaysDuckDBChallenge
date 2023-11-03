@@ -56,17 +56,15 @@ To ensure data accuracy, consistency, and integrity, I conducted the following p
 9 were focused on querying the dataset to answer specific questions and gain deeper insights into player statistics and characteristics. Here's a summary of my accomplishments:
 
 1. Identifying Players with the Highest OVA and POT Within Each Club: I began my analysis by identifying players with the highest OVA and POT within each club. This task allowed me to pinpoint the top-performing players within individual clubs. By ranking players based on their OVA and POT, I gained a clearer understanding of excellence within the dataset.
-
-   '''
+  
+   ```
          SELECT Full_name,  Club, OVA, POT,
          FROM (SELECT Club, Full_name, OVA, POT, 
                RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
                FROM fifa21_data2) RankedPlayers
          WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
-
-   '''
-  
-   
+      ```
+ ![](Row_Numbers.jpg)
 
 3. Calculating the Average OVA for Different Age Groups in Each Club: To gain insights into how player performance varies with age, I calculated the average OVA for players under 25 years old and those over 30 years old within each club. This analysis provided me with a better understanding of the age dynamics in different clubs.
 
