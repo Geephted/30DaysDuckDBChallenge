@@ -2,6 +2,8 @@
 
 # 30DaysDuckDBChallenge
 
+ ![](1697794856468.jpg)
+
 ## Introduction 
 I'm absolutely thrilled to embark on this exciting journey of data exploration and analysis with DuckDB in conjunction with MotherDuck. The **#30DaysDuckDBChallenge** represents a unique opportunity for me to dive headfirst into the world of data, unlocking valuable insights and honing my skills using DuckDB, a robust database management system.
 
