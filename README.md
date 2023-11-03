@@ -66,12 +66,46 @@ To ensure data accuracy, consistency, and integrity, I conducted the following p
       ```
  ![](Row_Numbers.jpg)
 
-3. Calculating the Average OVA for Different Age Groups in Each Club: To gain insights into how player performance varies with age, I calculated the average OVA for players under 25 years old and those over 30 years old within each club. This analysis provided me with a better understanding of the age dynamics in different clubs.
+2. Calculating the Average OVA for Different Age Groups in Each Club: To gain insights into how player performance varies with age, I calculated the average OVA for players under 25 years old and those over 30 years old within each club. This analysis provided me with a better understanding of the age dynamics in different clubs.
 
-4. Listing Players with the Same Age within Each Club: My next task involved identifying players who share the same age within each club. This analysis revealed clusters of players within clubs who are of the same age, potentially reflecting recruitment strategies or the popularity of certain age groups within the club.
+      
+       SELECT Club,
+             Round (AVG(CASE WHEN age < 25 THEN OVA ELSE NULL END)) Average_OVA_Under_25,
+             Round (AVG(CASE WHEN age > 30 THEN OVA ELSE NULL END)) Average_OVA_Over_30
+       FROM fifa21_data2
+       GROUP BY Club
+       ORDER BY Average_OVA_Under_25 DESC, 
+	          Average_OVA_Over_30 DESC;
+            ```
 
-5. Finding the Player with the Highest POT for Each Nationality: I also explored player nationality by locating the player with the highest POT for each nationality. This analysis unveiled the top-performing players from different nationalities, providing valuable information for international comparisons.
+3. Listing Players with the Same Age within Each Club: My next task involved identifying players who share the same age within each club. This analysis revealed clusters of players within clubs who are of the same age, potentially reflecting recruitment strategies or the popularity of certain age groups within the club.
 
-6. Ranking Players by OVA in Descending Order within Each Club: Finally, I ranked players by their OVA in descending order within each club. This ranking enabled me to assess the hierarchy of player performance within individual clubs, offering insights into team strengths and standout players.
+ ```
+         SELECT Full_name,  Club, OVA, POT,
+         FROM (SELECT Club, Full_name, OVA, POT, 
+               RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
+               FROM fifa21_data2) RankedPlayers
+         WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
+      ```
+
+4. Finding the Player with the Highest POT for Each Nationality: I also explored player nationality by locating the player with the highest POT for each nationality. This analysis unveiled the top-performing players from different nationalities, providing valuable information for international comparisons.
+
+    ```
+         SELECT Full_name,  Club, OVA, POT,
+         FROM (SELECT Club, Full_name, OVA, POT, 
+               RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
+               FROM fifa21_data2) RankedPlayers
+         WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
+      ```
+
+5. Ranking Players by OVA in Descending Order within Each Club: Finally, I ranked players by their OVA in descending order within each club. This ranking enabled me to assess the hierarchy of player performance within individual clubs, offering insights into team strengths and standout players.
+
+ ```
+         SELECT Full_name,  Club, OVA, POT,
+         FROM (SELECT Club, Full_name, OVA, POT, 
+               RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
+               FROM fifa21_data2) RankedPlayers
+         WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
+      ```
 
 
