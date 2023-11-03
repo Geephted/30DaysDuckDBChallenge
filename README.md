@@ -47,12 +47,39 @@ To ensure data accuracy, consistency, and integrity, I conducted the following p
       ![](8in1.jpg)
 
 ## Day 6-7: Analysis 
-
- I have successfully completed several key tasks to gain valuable insights from the FIFA datasets writing some SQL queries . The completion of these tasks has provided me with some valuable insights and information.
-1. I have identified players with exceptional value propositions.
-2. I have gained understanding of player distribution by position. 
-3. I discovered the club with the largest representation in the dataset.
-4. I also discovered the top 10 performing players in terms of OVA and POT. 
+I successfully completed the first set of data analysis tasks for this journey, gaining profound insights into the FIFA 2021 dataset. These tasks involved thorough exploration of player data, leveraging DuckDB's analytical capabilities. This report outlines my findings and key takeaways from each of the four completed tasks the thier SQL queries.
+ 
+1.  **Identifying High-Value, Low-Wage Players** My analysis has revealed players in the dataset with substantial market value yet receiving relatively low wages. This task has provided me with a better understanding of undercompensated assets, opening opportunities for potential player negotiations and highlighting market inefficiencies.
+    ```
+	SELECT Full_Name, Value, Wage 
+	FROM fifa21_data2 
+	WHERE Value >(SELECT AVG(Value) 
+		      FROM fifa21_data2) 
+		      AND Wage <(SELECT AVG(Wage) FROM fifa21_data2 ) 
+	ORDER BY Value DESC LIMIT 15;
+     ```
+2. **Player Count by Position**: Determining player counts for each position within the dataset was pivotal in comprehending the distribution of roles in the football world. This analysis has afforded me an extensive overview of the diversity and abundance of player positions.
+     ```
+   	SELECT Best_Position, COUNT(Full_Name) Count_of_Players 
+	FROM fifa21_data2 
+	GROUP BY Best_Position 
+	ORDER BY Count_of_Players DESC;
+      ```
+3. **Club with Largest Player Representation**. Exploring which club boasts the most substantial representation of players in the dataset has given me valuable insights into clubs' sizes and their global player recruitment strategies.
+     ```
+	SELECT Club, COUNT(Full_name) as Count_of_Players 
+	FROM fifa21_data2 
+	GROUP BY Club 
+	ORDER BY COUNT (Full_name) DESC 
+	--LIMIT 1;
+      ```
+4. **Top 10 Players by OVA and POT** In the final task, I compiled a list of the top 10 players with the highest Overall (OVA) and Potential (POT) values. This ranking has uncovered standout players and potential rising stars in the realm of football.
+     ```
+   	SELECT  Name_on_shirt, OVA, Pot 
+	FROM fifa21_data2
+	ORDER BY OVA DESC, POT DESC
+	LIMIT 10;
+      ```
 
 ## Day 8-9: Analysis 
 9 were focused on querying the dataset to answer specific questions and gain deeper insights into player statistics and characteristics. Here's a summary of my accomplishments:
