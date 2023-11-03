@@ -58,54 +58,54 @@ To ensure data accuracy, consistency, and integrity, I conducted the following p
 1. Identifying Players with the Highest OVA and POT Within Each Club: I began my analysis by identifying players with the highest OVA and POT within each club. This task allowed me to pinpoint the top-performing players within individual clubs. By ranking players based on their OVA and POT, I gained a clearer understanding of excellence within the dataset.
   
    ```
-         SELECT Full_name,  Club, OVA, POT,
-         FROM (SELECT Club, Full_name, OVA, POT, 
-               RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
-               FROM fifa21_data2) RankedPlayers
-         WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
+     SELECT Full_name,  Club, OVA, POT,
+     FROM (SELECT Club, Full_name, OVA, POT, 
+   	   RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
+   	   FROM fifa21_data2) RankedPlayers
+     WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
       ```
- ![](Row_Numbers.jpg)
+	 ![](8in1.jpg)
 
 2. Calculating the Average OVA for Different Age Groups in Each Club: To gain insights into how player performance varies with age, I calculated the average OVA for players under 25 years old and those over 30 years old within each club. This analysis provided me with a better understanding of the age dynamics in different clubs.
-
-      
-       SELECT Club,
-             Round (AVG(CASE WHEN age < 25 THEN OVA ELSE NULL END)) Average_OVA_Under_25,
-             Round (AVG(CASE WHEN age > 30 THEN OVA ELSE NULL END)) Average_OVA_Over_30
-       FROM fifa21_data2
-       GROUP BY Club
-       ORDER BY Average_OVA_Under_25 DESC, 
+   
+     ```
+  	SELECT Club,
+     		Round (AVG(CASE WHEN age < 25 THEN OVA ELSE NULL END)) Average_OVA_Under_25,
+  		Round (AVG(CASE WHEN age > 30 THEN OVA ELSE NULL END)) Average_OVA_Over_30
+       	FROM fifa21_data2
+        GROUP BY Club
+        ORDER BY Average_OVA_Under_25 DESC, 
 	          Average_OVA_Over_30 DESC;
-            ```
+      ```
+	 ![](8in2.jpg)
 
 3. Listing Players with the Same Age within Each Club: My next task involved identifying players who share the same age within each club. This analysis revealed clusters of players within clubs who are of the same age, potentially reflecting recruitment strategies or the popularity of certain age groups within the club.
 
- ```
-         SELECT Full_name,  Club, OVA, POT,
-         FROM (SELECT Club, Full_name, OVA, POT, 
-               RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
-               FROM fifa21_data2) RankedPlayers
-         WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
-      ```
-
+	 ```
+  		SELECT Club, Age, ARRAY_AGG(Full_Name) Prayers_with_Same_Age
+		FROM fifa21_data2
+    		GROUP BY Club, Age
+    		HAVING COUNT(*) > 1
+  	  ```
+ 	  ![](8in3.jpg)
+   
 4. Finding the Player with the Highest POT for Each Nationality: I also explored player nationality by locating the player with the highest POT for each nationality. This analysis unveiled the top-performing players from different nationalities, providing valuable information for international comparisons.
-
-    ```
-         SELECT Full_name,  Club, OVA, POT,
-         FROM (SELECT Club, Full_name, OVA, POT, 
-               RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
-               FROM fifa21_data2) RankedPlayers
-         WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
-      ```
-
+     ```
+	SELECT Full_name, Nationality, POT,
+	 FROM (SELECT Full_name, Nationality, POT, 
+    		 RANK() OVER (PARTITION BY Nationality ORDER BY POT DESC) AS Player_rank 
+    		FROM fifa21_data2) AS RankedPlayers
+	 WHERE Player_rank = 1 ORDER BY POT DESC
+     ```
+	 ![](8in4.jpg)
+ 
 5. Ranking Players by OVA in Descending Order within Each Club: Finally, I ranked players by their OVA in descending order within each club. This ranking enabled me to assess the hierarchy of player performance within individual clubs, offering insights into team strengths and standout players.
 
- ```
-         SELECT Full_name,  Club, OVA, POT,
-         FROM (SELECT Club, Full_name, OVA, POT, 
-               RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
-               FROM fifa21_data2) RankedPlayers
-         WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
-      ```
-
+    ```
+ 	SELECT Full_Name, Club, OVA, 
+    		DENSE_RANK() OVER(PARTITION BY Club ORDER BY OVA DESC) OVA_Player_Ranking 
+	FROM fifa21_data2 
+	ORDER BY OVA DESC
+     ```
+      ![](8in5.jpg)
 
