@@ -87,7 +87,7 @@ I successfully completed the first set of data analysis tasks for this journey, 
       ```
 
 ## Day 8-9: Analysis 
-9 were focused on querying the dataset to answer specific questions and gain deeper insights into player statistics and characteristics. Here's a summary of my accomplishments:
+Additional tasks were assigned to gain further insight into the dataset, offering responses to specific queries and delving deeper into players statistics and characteristics. Here's an overview of my achievements:
 
 1. **Identifying Players with the Highest OVA and POT Within Each Club**: I initiated my analysis by employing the Rank function to uncover players with the highest OVA and POT in each club. This process enabled me to precisely identify the top-performing players within every club. Through the ranking of players according to their OVA and POT, I achieved a more distinct grasp of excellence within the dataset.
   
