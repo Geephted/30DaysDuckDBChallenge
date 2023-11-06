@@ -21,6 +21,7 @@ Complementing DuckDB is Power BI, our visualization powerhouse. With its interac
 
 ## Day 1: Getting Started 
 To kickstart the **#30DaysDuckDBChallenge** journey, i started by creating a Motherduck account and becoming part of the Motherduck community. Next, I install DuckDB and set it up on my local machine. I also make sure to install Power BI on my computer and configure it to be ready for action. As I make progress, I share my updates on Twitter and LinkedIn, posting a screenshot of my Motherduck account. This is where the adventure begins
+ ![](week2motherduck.jpg)
 
 ## Day 2: Database Creation 
 The next step is to create a DuckDB database named "**challenge**." I loaded the two FIFA dataset files into DuckDB. With my data securely loaded into DuckDB, I connected my DuckDB with Motherduck, our collaborative platform. This connection will make it easier for a third party with the shared link to explore the data efficiently. Then, I shared my progress, as it is encouraged, enhancing the collaborative and enriching learning experience.
@@ -55,85 +56,23 @@ To ensure data accuracy, consistency, and integrity, I conducted the following p
 I successfully completed the first set of data analysis tasks for this journey, gaining profound insights into the FIFA 2021 dataset. These tasks involved thorough exploration of player data, leveraging DuckDB's analytical capabilities. This report outlines my findings and key takeaways from each of the four completed tasks the thier SQL queries.
  
 1.  **Identifying High-Value, Low-Wage Players** My analysis has revealed players in the dataset with substantial market value yet receiving relatively low wages. This task has provided me with a better understanding of undercompensated assets, opening opportunities for potential player negotiations and highlighting market inefficiencies.
-    ```
-	SELECT Full_Name, Value, Wage 
-	FROM fifa21_data2 
-	WHERE Value >(SELECT AVG(Value) 
-		      FROM fifa21_data2) 
-		      AND Wage <(SELECT AVG(Wage) FROM fifa21_data2 ) 
-	ORDER BY Value DESC LIMIT 15;
-     ```
+
 2. **Player Count by Position**: Determining player counts for each position within the dataset was pivotal in comprehending the distribution of roles in the football world. This analysis has afforded me an extensive overview of the diversity and abundance of player positions.
-     ```
-   	SELECT Best_Position, COUNT(Full_Name) Count_of_Players 
-	FROM fifa21_data2 
-	GROUP BY Best_Position 
-	ORDER BY Count_of_Players DESC;
-      ```
+
 3. **Club with Largest Player Representation**. Exploring which club boasts the most substantial representation of players in the dataset has given me valuable insights into clubs' sizes and their global player recruitment strategies.
-     ```
-	SELECT Club, COUNT(Full_name) as Count_of_Players 
-	FROM fifa21_data2 
-	GROUP BY Club 
-	ORDER BY COUNT (Full_name) DESC 
-	--LIMIT 1;
-      ```
+   
 4. **Top 10 Players by OVA and POT** In the final task, I compiled a list of the top 10 players with the highest Overall (OVA) and Potential (POT) values. This ranking has uncovered standout players and potential rising stars in the realm of football.
-     ```
-   	SELECT  Name_on_shirt, OVA, Pot 
-	FROM fifa21_data2
-	ORDER BY OVA DESC, POT DESC
-	LIMIT 10;
-      ```
 
 ## Day 8-9: Analysis 
 Additional tasks were assigned to gain further insight into the dataset, offering responses to specific queries and delving deeper into players statistics and characteristics. Here's an overview of my achievements:
 
 1. **Identifying Players with the Highest OVA and POT Within Each Club**: I initiated my analysis by employing the Rank function to uncover players with the highest OVA and POT in each club. This process enabled me to precisely identify the top-performing players within every club. Through the ranking of players according to their OVA and POT, I achieved a more distinct grasp of excellence within the dataset.
-  
-   ```
-     SELECT Full_name,  Club, OVA, POT,
-     FROM (SELECT Club, Full_name, OVA, POT, 
-   	   RANK() OVER (PARTITION BY Club ORDER BY OVA DESC, POT DESC) Player_rank 
-   	   FROM fifa21_data2) RankedPlayers
-     WHERE Player_rank = 1 ORDER BY OVA DESC, POT DESC
-      ```
 
 2. **Calculating the Average OVA for Different Age Groups in Each Club**: I harnessed the Case statement and rounded up the average figures to explore the variations in player performance concerning age. This involved computing the average OVA for players under 25 years old and those over 30 years old in each club. Through this analysis, I deepened my comprehension of age dynamics within various clubs.
-   
-     ```
-  	SELECT Club,
-     		Round (AVG(CASE WHEN age < 25 THEN OVA ELSE NULL END)) Average_OVA_Under_25,
-  		Round (AVG(CASE WHEN age > 30 THEN OVA ELSE NULL END)) Average_OVA_Over_30
-       	FROM fifa21_data2
-        GROUP BY Club
-        ORDER BY Average_OVA_Under_25 DESC, 
-	          Average_OVA_Over_30 DESC;
-      ```
 
 3. **Listing Players with the Same Age within Each Club: My next task involved identifying players who share the same age within each club**. Leveraging the Array function, my analysis unveiled groupings of players within clubs who share the same age. This insight sheds light on possible recruitment strategies or the prevalence of specific age groups within the club.
-	 ```
-  		SELECT Club, Age, ARRAY_AGG(Full_Name) Prayers_with_Same_Age
-		FROM fifa21_data2
-    		GROUP BY Club, Age
-    		HAVING COUNT(*) > 1
-  	  ```
    
 4. **Finding the Player with the Highest POT for Each Nationality**: Employing the Rank function, I delved into player nationalities, identifying the player with the highest POT for each nationality. This analysis unveiled standout players from various nationalities, offering valuable insights for international comparisons.
-     ```
-	SELECT Full_name, Nationality, POT,
-	 FROM (SELECT Full_name, Nationality, POT, 
-    		 RANK() OVER (PARTITION BY Nationality ORDER BY POT DESC) AS Player_rank 
-    		FROM fifa21_data2) AS RankedPlayers
-	 WHERE Player_rank = 1 ORDER BY POT DESC
-     ```
  
 5. Ranking Players by OVA in Descending Order within Each Club: Utilizing the Dense Rank function, I systematically ranked players by their OVA in descending order within each club. This ranking provided a clear view of the hierarchy of player performance within individual clubs, offering valuable insights into team strengths and standout players.
-
-    ```
- 	SELECT Full_Name, Club, OVA, 
-    		DENSE_RANK() OVER(PARTITION BY Club ORDER BY OVA DESC) OVA_Player_Ranking 
-	FROM fifa21_data2 
-	ORDER BY OVA DESC
-     ```
 
