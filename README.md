@@ -76,3 +76,31 @@ Additional tasks were assigned to gain further insight into the dataset, offerin
  
 5. Ranking Players by OVA in Descending Order within Each Club: Utilizing the Dense Rank function, I systematically ranked players by their OVA in descending order within each club. This ranking provided a clear view of the hierarchy of player performance within individual clubs, offering valuable insights into team strengths and standout players.
 
+## Day 11 -12: visualisation
+We have now entered the second stage of the challenge, where we continue to utilize the FIFA21 Dataset. In this phase, we're delving into the importance of data visualization for extracting practical insights from intricate datasets, highlighting the capabilities of Power BI's prowess through the following tasks;
+
+**Task 1: Nationality Distribution:** Create a bar chart that displays the distribution of players' nationalities.
+Allow users to filter by nationality to see players from specific countries.
+
+**Task 2: Age vs. Potential:** Build a scatter plot that explores the relationship between a player's "Age" and "POT" (potential).
+Add a trendline to visualize the trend between age and potential.
+
+**Task 3: Player Position Analysis:** Generate a pie chart showing the distribution of player positions ("Positions" column).
+Make the chart interactive so users can select a position to view players with that role.
+
+**Task 4: Top Players by Overall Rating:** Create a table that lists the top players based on their "OVA" (overall rating) in descending order.
+Allow users to filter by a specific club to see its top-rated players.
+
+Interactive Dashboard:
+ ![](Dashboard2.jpg)
+
+### Summary of Insight:
+
+**Player Position Analysis:** The pie chart reveals a significant prevalence of Centre-Back positions, underscoring their crucial role in defensive strategies within football.
+
+**Top Player Spotlight:** Lionel Messi stands out as the highest-rated player in the dataset, spotlighting his exceptional skills and performance.
+
+**Potential and Age Relationship:** The scatter plot comparing Potential (POT) with Age indicates no discernible correlation. As players age, their potential ratings don't follow a consistent pattern, suggesting age might not significantly determine potential in this dataset.
+
+**Global Player Diversity:** The count of players by nationality showcases diverse representation from various countries, emphasizing the extensive global presence within FIFA and the sport's diverse talent pool.
+
