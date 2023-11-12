@@ -76,7 +76,7 @@ Additional tasks were assigned to gain further insight into the dataset, offerin
  
 5. Ranking Players by OVA in Descending Order within Each Club: Utilizing the Dense Rank function, I systematically ranked players by their OVA in descending order within each club. This ranking provided a clear view of the hierarchy of player performance within individual clubs, offering valuable insights into team strengths and standout players.
 
-## Day 11 -12: visualisation
+## Day 11 -12: Visualisation
 We have now entered the second stage of the challenge, where we continue to utilize the FIFA21 Dataset. In this phase, we're delving into the importance of data visualization for extracting practical insights from intricate datasets, highlighting the capabilities of Power BI's prowess through the following tasks;
 
 **Task 1: Nationality Distribution:** Create a bar chart that displays the distribution of players' nationalities.
