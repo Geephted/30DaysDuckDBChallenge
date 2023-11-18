@@ -104,3 +104,19 @@ Interactive Dashboard:
 
 **Global Player Diversity:** The count of players by nationality showcases diverse representation from various countries, emphasizing the extensive global presence within FIFA and the sport's diverse talent pool.
 
+## Day 13 & 14 Reading "DuckDB in Action" and watching some recommended videos.
+Continuing the #30DaysDuckDBChallenge with DuckDB, I expanded my knowledge through recommended videos, pre-reading, and exploring "DuckDB in Action." The book proved to be a genuine eye-opener, delivering a remarkably enlightening experience. It commenced with a concise introduction to DuckDB, offering detailed insights into its essence and capabilities.
+
+DuckDB, a formidable force in data analytics, seamlessly integrates with CLI operations, cloud data pipelines, and Python coding. Its remarkable versatility extends to handling various file formats and databases, both locally and remotely, encompassing CSV, JSON, Parquet, and Arrow. The compatibility with databases like MySQL, SQLite, and Postgres further underscores DuckDB's adaptability.
+
+A standout feature of DuckDB is its vectorized query engine, ensuring rapid and cost-effective data analysis. The engine's efficiency in accessing data directly from diverse sources eliminates the need for superfluous data transfers. DuckDB proves to be platform-agnostic, effortlessly adapting to various operating systems, making it a versatile companion regardless of the platform.
+
+The accompanying book provides valuable insights into practical scenarios, offering guidance on leveraging DuckDB judiciously. It furnishes a comprehensive list for data structure enthusiasts, equipping them with tools for efficient navigation, including commonly used Dot commands.
+Shifting focus to queries, the emphasis is on the ease of performing SQL queries, whether through CLI configuration or Python app embedding. The book provides a thorough walkthrough of Data Manipulation Language (DML) queries and clauses, such as JOIN and WITH, with illustrative examples for easy understanding.
+
+In essence, DuckDB transcends its identity as a mere tool; it signifies a mindset shift, streamlining data analysis into a faster, simpler, and cost-effective process. The book serves as a guide, demonstrating effective ways to leverage DuckDB in projects.
+
+In the practical application and continuation of the challenge, I seamlessly uploaded the Titanic datasets onto DuckDB. Notable details include 891 passengers in the train dataset, 418 rows in the test dataset, and the absence of the "Survived" column in the test dataset, all in CSV format. Paying meticulous attention to these details became crucial as I familiarized myself with every nook and cranny of the datasets.
+
+
+
