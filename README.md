@@ -104,7 +104,7 @@ Interactive Dashboard:
 
 **Global Player Diversity:** The count of players by nationality showcases diverse representation from various countries, emphasizing the extensive global presence within FIFA and the sport's diverse talent pool.
 
-## Day 13 & 14 Reading "DuckDB in Action" and watching some recommended videos.
+## Day 13 & 14 Reading "DuckDB in Action" and Watching some Recommended Videos.
 Continuing the #30DaysDuckDBChallenge with DuckDB, I expanded my knowledge through recommended videos, pre-reading, and exploring "DuckDB in Action." The book proved to be a genuine eye-opener, delivering a remarkably enlightening experience. It commenced with a concise introduction to DuckDB, offering detailed insights into its essence and capabilities.
 
 DuckDB, a formidable force in data analytics, seamlessly integrates with CLI operations, cloud data pipelines, and Python coding. Its remarkable versatility extends to handling various file formats and databases, both locally and remotely, encompassing CSV, JSON, Parquet, and Arrow. The compatibility with databases like MySQL, SQLite, and Postgres further underscores DuckDB's adaptability.
