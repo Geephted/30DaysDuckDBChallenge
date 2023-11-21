@@ -119,16 +119,25 @@ In essence, DuckDB transcends its identity as a mere tool; it signifies a mindse
 In the practical application and continuation of the challenge, I seamlessly uploaded the Titanic datasets onto DuckDB. Notable details include 891 passengers in the train dataset, 418 rows in the test dataset, and the absence of the "Survived" column in the test dataset, all in CSV format. Paying meticulous attention to these details became crucial as I familiarized myself with every nook and cranny of the datasets.
 
 ## Day 17 & 18: Advanced SQL Techniques
-Just sailed through a fascinating data exploration journey with the Titanic dataset in the ongoing #30DaysDuckDBChallenge🎉  with DuckDB! 🌊 . Immersing myself in Advanced SQL techniques using the CTE and Windows Functions, Below a snapshot of the findings on survival rates, gender distinctions, and age correlations.
+Just sailed through a fascinating data exploration journey with the Titanic dataset in the ongoing #30DaysDuckDBChallenge with DuckDB. Immersing myself in Advanced SQL techniques using the CTE and Windows Functions, Below a snapshot of the findings on survival rates, gender distinctions, and age correlations.
 
 **Question 1: Fare vs. Survival Rates** 
-I utilized the NTILE window function to evenly bucket passengers based on fare into 6 bins. Calculated statistics for each bin, shedding light on survival rates. Intriguingly, observed potential correlations between fare amounts and survival. The journey through the fare landscape revealed compelling insights.
+
+I utilized the NTILE window function to evenly bucket passengers based on fare into 6 bins. Calculated statistics for each bin, shedding light on survival rates. Intriguingly, observed potential correlations between fare amounts and survival. The journey through the fare landscape revealed compelling insights. After successfully writing and executing the query, the screenshot below displays the query's results.
+
+ ![](QUETION1.ANSWER.jpg)
 
 **Question 2: Gender Disparities in Survival Rates** 
-I conducted a meticulous analysis of survival rates based on gender, employing CTE for a nuanced perspective. Calculated the percentage of passengers who survived, emphasizing the stark distinctions between males and females. Unearthed noteworthy differences in survival ratios, providing valuable insights into the impact of gender.
+
+I conducted a meticulous analysis of survival rates based on gender, employing CTE for a nuanced perspective. Calculated the percentage of passengers who survived, emphasizing the stark distinctions between males and females. Unearthed noteworthy differences in survival ratios, providing valuable insights into the impact of gender. After successfully writing and executing the query, the screenshot below displays the query's results.
+
+ ![](QUESTION2.ANSWER.jpg)
 
 **Question 3: Age and its Role in Survival** 
-I explored the intricate relationship between age and survival rates. Calculated survival rates for different age groups, unraveling intriguing patterns and trends. The analysis offered a glimpse into how age correlates with the likelihood of survival. As the Titanic's story unfolded, age emerged as a crucial factor influencing passengers' destinies.
+
+I explored the intricate relationship between age and survival rates. Calculated survival rates for different age groups, unraveling intriguing patterns and trends. The analysis offered a glimpse into how age correlates with the likelihood of survival. As the Titanic's story unfolded, age emerged as a crucial factor influencing passengers' destinies. After successfully writing and executing the query, the screenshot below displays the query's results.
+
+ ![](QUESTION3.ANSWER.jpg)
 
 Embarking on this analytical journey through the Titanic dataset was not just a voyage through numbers; it was a dive into the stories of those aboard. Every insight gained adds another layer to the narrative of this historic event.
 
