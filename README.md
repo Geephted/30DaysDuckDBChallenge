@@ -104,7 +104,7 @@ Interactive Dashboard:
 
 **Global Player Diversity:** The count of players by nationality showcases diverse representation from various countries, emphasizing the extensive global presence within FIFA and the sport's diverse talent pool.
 
-## Day 13 & 14 Reading "DuckDB in Action" and Watching some Recommended Videos.
+## Day 13 - 16 Reading "DuckDB in Action" and Watching some Recommended Videos.
 Continuing the #30DaysDuckDBChallenge with DuckDB, I expanded my knowledge through recommended videos, pre-reading, and exploring "DuckDB in Action." The book proved to be a genuine eye-opener, delivering a remarkably enlightening experience. It commenced with a concise introduction to DuckDB, offering detailed insights into its essence and capabilities.
 
 DuckDB, a formidable force in data analytics, seamlessly integrates with CLI operations, cloud data pipelines, and Python coding. Its remarkable versatility extends to handling various file formats and databases, both locally and remotely, encompassing CSV, JSON, Parquet, and Arrow. The compatibility with databases like MySQL, SQLite, and Postgres further underscores DuckDB's adaptability.
@@ -117,6 +117,21 @@ Shifting focus to queries, the emphasis is on the ease of performing SQL queries
 In essence, DuckDB transcends its identity as a mere tool; it signifies a mindset shift, streamlining data analysis into a faster, simpler, and cost-effective process. The book serves as a guide, demonstrating effective ways to leverage DuckDB in projects.
 
 In the practical application and continuation of the challenge, I seamlessly uploaded the Titanic datasets onto DuckDB. Notable details include 891 passengers in the train dataset, 418 rows in the test dataset, and the absence of the "Survived" column in the test dataset, all in CSV format. Paying meticulous attention to these details became crucial as I familiarized myself with every nook and cranny of the datasets.
+
+## Day 17 & 18: Advanced SQL Techniques
+Just sailed through a fascinating data exploration journey with the Titanic dataset in the ongoing #30DaysDuckDBChallenge🎉  with DuckDB! 🌊 . Immersing myself in Advanced SQL techniques using the CTE and Windows Functions, Below a snapshot of the findings on survival rates, gender distinctions, and age correlations.
+
+**Question 1: Fare vs. Survival Rates** 
+I utilized the NTILE window function to evenly bucket passengers based on fare into 6 bins. Calculated statistics for each bin, shedding light on survival rates. Intriguingly, observed potential correlations between fare amounts and survival. The journey through the fare landscape revealed compelling insights.
+
+**Question 2: Gender Disparities in Survival Rates** 
+I conducted a meticulous analysis of survival rates based on gender, employing CTE for a nuanced perspective. Calculated the percentage of passengers who survived, emphasizing the stark distinctions between males and females. Unearthed noteworthy differences in survival ratios, providing valuable insights into the impact of gender.
+
+**Question 3: Age and its Role in Survival** 
+I explored the intricate relationship between age and survival rates. Calculated survival rates for different age groups, unraveling intriguing patterns and trends. The analysis offered a glimpse into how age correlates with the likelihood of survival. As the Titanic's story unfolded, age emerged as a crucial factor influencing passengers' destinies.
+
+Embarking on this analytical journey through the Titanic dataset was not just a voyage through numbers; it was a dive into the stories of those aboard. Every insight gained adds another layer to the narrative of this historic event.
+
 
 
 
