@@ -119,7 +119,7 @@ In essence, DuckDB transcends its identity as a mere tool; it signifies a mindse
 In the practical application and continuation of the challenge, I seamlessly uploaded the Titanic datasets onto DuckDB. Notable details include 891 passengers in the train dataset, 418 rows in the test dataset, and the absence of the "Survived" column in the test dataset, all in CSV format. Paying meticulous attention to these details became crucial as I familiarized myself with every nook and cranny of the datasets.
 
 ## Day 17 & 18: Advanced SQL Techniques
-Just sailed through a fascinating data exploration journey with the Titanic dataset in the ongoing #30DaysDuckDBChallenge with DuckDB. Immersing myself in Advanced SQL techniques using the CTE and Windows Functions, Below a snapshot of the findings on survival rates, gender distinctions, and age correlations.
+Just sailed through a fascinating data exploration with the Titanic dataset in the ongoing #30DaysDuckDBChallenge with DuckDB. Immersing myself in Advanced SQL techniques using the CTE and Windows Functions, Below a snapshot of the findings on survival rates, gender distinctions, and age correlations.
 
 **Question 1: Fare vs. Survival Rates** 
 
