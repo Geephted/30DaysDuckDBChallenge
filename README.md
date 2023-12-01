@@ -141,6 +141,39 @@ I explored the intricate relationship between age and survival rates. Calculated
 
 Embarking on this analytical journey through the Titanic dataset was not just a voyage through numbers; it was a dive into the stories of those aboard. Every insight gained adds another layer to the narrative of this historic event.
 
+## Day 19 & 20: Advanced SQL Techniques
+In the fascinating world of data exploration, we continued in the #30DaysDuckDBChallenge journey with DuckDB to uncover insights from the Titanic dataset. Here are two questions we delved into:
+
+**Question 1: Understanding Titles and Survival Rates**
+
+a. Identifying Unique Titles: I parsed through the 'Name' column, extracting unique titles. Understanding the diverse titles passengers held adds richness to our analysis.
+
+ ![](20in1AG.jpg)
+ 
+b. Consolidating Titles: To simplify our analysis, i grouped infrequent titles into broader categories. This consolidation included labels like 'Mr,' 'Mrs,' 'Miss,' and 'Master’, ‘Dr’, ‘Major’ and many others. This step provides a clearer picture of passenger demographics.
+
+ ![](20in1BG.jpg)
+
+c. Calculating Survival Rates: Crunching the numbers, I calculated survival rates for each title grouping. This enables me to discern patterns in the likelihood of survival based on social titles.
+
+ ![](20in1CG.jpg)
+
+**Question 2: Calculating Survival based on Gender and Age**
+
+For our second question, I took a binary approach, evaluating survival based on being a woman/child or an adult man.
+
+ ![](20in2g.jpg)
+
+**Here are my findings:**
+
+•	Child and Women Survival Rates: My analysis revealed higher survival rates among children and women. This aligns with the well-known maritime principle of "women and children first."
+•	Insights into Titles: Uncovering survival rates based on titles sheds light on societal norms and expectations during the Titanic tragedy. This analysis provides a nuanced understanding of survival dynamics.
+
+**Key Takeaways:**
+•	Social status, as indicated by titles, played a role in survival outcomes.
+•	The binary feature of being a woman/child correlated with higher survival rates.
+
+
 
 
 
