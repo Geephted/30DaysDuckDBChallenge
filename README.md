@@ -148,7 +148,7 @@ In the fascinating world of data exploration, we continued in the #30DaysDuckDBC
 
 a. Identifying Unique Titles: I parsed through the 'Name' column, extracting unique titles. Understanding the diverse titles passengers held adds richness to our analysis.
 
- ![](20in1AG.jpg)
+ ![](20in1A_G.jpg)
  
 b. Consolidating Titles: To simplify our analysis, i grouped infrequent titles into broader categories. This consolidation included labels like 'Mr,' 'Mrs,' 'Miss,' and 'Master’, ‘Dr’, ‘Major’ and many others. This step provides a clearer picture of passenger demographics.
 
@@ -156,7 +156,7 @@ b. Consolidating Titles: To simplify our analysis, i grouped infrequent titles i
 
 c. Calculating Survival Rates: Crunching the numbers, I calculated survival rates for each title grouping. This enables me to discern patterns in the likelihood of survival based on social titles.
 
- ![](20in1CG.jpg)
+ ![](20in1C_G.jpg)
 
 **Question 2: Calculating Survival based on Gender and Age**
 
