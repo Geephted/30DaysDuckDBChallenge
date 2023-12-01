@@ -167,10 +167,13 @@ For our second question, I took a binary approach, evaluating survival based on 
 **Here are my findings:**
 
 •	Child and Women Survival Rates: My analysis revealed higher survival rates among children and women. This aligns with the well-known maritime principle of "women and children first."
+
 •	Insights into Titles: Uncovering survival rates based on titles sheds light on societal norms and expectations during the Titanic tragedy. This analysis provides a nuanced understanding of survival dynamics.
 
 **Key Takeaways:**
+
 •	Social status, as indicated by titles, played a role in survival outcomes.
+
 •	The binary feature of being a woman/child correlated with higher survival rates.
 
 
