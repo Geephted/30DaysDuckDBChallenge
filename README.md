@@ -177,6 +177,44 @@ For our second question, I took a binary approach, evaluating survival based on 
 •	The binary feature of being a woman/child correlated with higher survival rates.
 
 
+## Day 21 - 23: Advanced SQL Techniques
+Just wrapped up incredible tasks in the #30DaysDuckDBChallenge with DuckDB, showcasing my proficiency in SQL and data analysis. Here are the highlights of the tasks:
+
+**Task 1: Survival based on Cabin Level**
+
+Wrote an SQL query to unveil the survival rates, the number of passengers, and their corresponding cabin levels.
+
+**Assumption:** Passengers with the same ticket number traveled together. 
+
+![](23.1A.jpg)
+
+**Task 2: Solo Travelers, Family Travelers, and Mix Group**
+
+I wrote a query to categorize passengers into solo travelers, family travelers, and mixed groups.
+
+**Assumption:** Solo travelers are those with a unique ticket, and families may span across different tickets. 
+
+![](23.2A.jpg)
+
+**Task 3: Family Size Calculation**
+
+Crafted an SQL query to determine family sizes, accounting for SibSp, ParCh, and the current passenger (+1). Family size was determined at the maximum based on ticket number and surname.
+
+**Assumption:** Families traveled together on the same ticket.
+
+![](23.3A.jpg)
+
+These tasks were intense, with rich learnings in querying and creative problem-solving. Special shoutout to DuckDB for providing a robust platform to explore these complex tasks.
+
+**Lessons Learned:**
+
+- Precision in crafting SQL queries is key.
+- Assumptions play a crucial role in problem-solving – define and validate them.
+- DuckDB's performance is truly impressive for analytical workloads.
+
+Grateful for the opportunity to dive deep into DuckDB's capabilities and share insights. Excited for the next task!
+
+
 
 
 
