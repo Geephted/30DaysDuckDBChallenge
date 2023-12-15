@@ -212,7 +212,37 @@ These tasks were intense, with rich learnings in querying and creative problem-s
 - Assumptions play a crucial role in problem-solving – define and validate them.
 - DuckDB's performance is truly impressive for analytical workloads.
 
-Grateful for the opportunity to dive deep into DuckDB's capabilities and share insights. Excited for the next task!
+Grateful for the opportunity to dive deep into DuckDB's capabilities and share insights. Excited for the next task
+
+## Day 24 - 26: Advanced SQL Techniques
+
+Just completed a deep dive into the Titanic dataset, unraveling intriguing insights with DBeaver. Here are some of the questions explored and their fascinating findings:
+
+**1.	Survival Rate of Males in the Third Passenger Class:**  
+
+Leveraging SQL, I delved into the survival rates of male passengers in the third class. The analysis uncovered that the survival rate for males in the third passenger class was 15%. Understanding survival dynamics across different demographics sheds light on historical realities. 
+
+![](26in1A.jpg)
+
+**2.	Percentage Survived Between Sex, Embarked, and PClass:**
+
+Another SQL query was crafted to understand the survival dynamics based on Sex, Embarked, and PClass. The results showcased a vivid picture of how these factors influenced passengers' chances of survival.
+
+![](26in2A.jpg)
+
+**3. Personalized Survival Advisory:** 
+
+An intriguing scenario was presented: a male passenger, 36 years old, in the second passenger class, embarked at 'C.' after running the SQL query, the result revealed a survival rate of 0. This scenario prompts reflection on the challenges faced by individuals with similar attributes during the Titanic's ill-fated journey.
+
+![](26in3A.jpg)
+
+**Key Takeaways:**
+
+- 	SQL proves to be a powerful tool for extracting meaningful insights from complex datasets.
+-  Understanding survival dynamics involves considering multiple variables, such as Sex, Embarked, and PClass.
+- 	The personalized survival advisory adds a human touch, emphasizing the individualized nature of historical data analysis.
+
+Grateful for the opportunity to explore and share these findings. Stay tuned for more data-driven adventures.
 
 
 
