@@ -1,4 +1,3 @@
-**_NOTE: THE CHALLENGE IS STILL ONGOING. I WILL CONTINUOUSLY UPDATE THIS REPOSITORY AS I MAKE PROGRESS_**
 
 # 30DaysDuckDBChallenge
 
@@ -243,6 +242,45 @@ An intriguing scenario was presented: a male passenger, 36 years old, in the sec
 - 	The personalized survival advisory adds a human touch, emphasizing the individualized nature of historical data analysis.
 
 Grateful for the opportunity to explore and share these findings. Stay tuned for more data-driven adventures.
+
+## Day 27 - 30: Visualisation
+
+I successfully completed the #30DaysDuckdbChallenge with DuckDB. Excited to share the final task crafting a Titanic Survival Dashboard. From exploring survival patterns based on fare, gender, and age to survival rate by fare, each task posed a unique challenge.
+
+**Dashboard Highlights:**
+
+-  Survival Based on Fare:
+     
+Utilized percentile function for fare bins.
+Visualized fare and survival correlation with scatter plots.
+Presented clear insights using tables.
+
+- Survival Based on sex:
+  
+Constructed a captivating column chart showcasing survival rates for males and females. 
+Highlighted distinct survival rates between genders.
+
+- Survival Based on Age:
+ 
+Used column charts to break down survival rates across different age groups.
+Discovered age-based survival patterns.
+
+- Survival Based on Embarked, Sex, and Pclass:
+
+Employed column charts to unveil survival rate patterns based on embarkation, gender, and passenger class.
+
+**Summary of Insight**
+
+The visual analysis of Sex, Embarked, and PClass highlights their impact on passengers' survival chances.
+The survival rate chart reveals insights into emergency evacuation protocols, emphasizing the prioritization of vulnerable groups like Women and Children. Notably, the chart indicates a higher survival rate among women than men. Additionally, it suggests that the fare amount paid does not correlate with the passengers' survival rates.
+
+The #30DaysDuckDB Challenge has been an incredible journey, propelling me to explore, learn, and creatively solve complex problems in data analytics. As the challenge concludes, I'm leaving with a deep sense of accomplishment, newfound skills, and a fortified passion for data analytics.
+
+This journey isn't the end; it's a steppingstone for continuous learning and growth in the dynamic landscape of data science and analytics. Excited for the future and grateful for the dedication, creativity, and resilience that fueled the completion of this challenge. Thank you, Oluwajuwon Ogunseye, for taking us through this amazing journey, for your patience and encouragement. I am grateful. 
+
+
+
+
 
 
 
