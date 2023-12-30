@@ -269,6 +269,8 @@ Discovered age-based survival patterns.
 
 Employed column charts to unveil survival rate patterns based on embarkation, gender, and passenger class.
 
+![](TITANIC.jpg)
+
 **Summary of Insight**
 
 The visual analysis of Sex, Embarked, and PClass highlights their impact on passengers' survival chances.
